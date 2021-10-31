@@ -4,7 +4,7 @@ DELAY 1000
 
 GUI SPACE
 DELAY 300
-STRING schmitz-server.de
+STRING "Name of website"
 ENTER
 DELAY 100
 
